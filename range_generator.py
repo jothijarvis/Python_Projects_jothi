@@ -1,6 +1,8 @@
-# Replicate Range function using Generator. author: Jothiswarooban k 
+# author: Jothiswarooban k 
 def myrange(start,end=None,step = 1):
-    '''This function accepts inputs similar to range function, because it replicates the range fucntion using generator. '''
+    '''This function replicates the range fucntion using generator. 
+        f = myrange(10,0,2)'''
+    
     if step == 0:
         raise ValueError("step count should be non zero")
     
@@ -54,3 +56,4 @@ f = myrange(10,0,-2)
 for i in zip_longest(f, range(10,0,-2)):
 
     print(i)
+
