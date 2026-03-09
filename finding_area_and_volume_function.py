@@ -1,4 +1,4 @@
-# Find area and volume. author: Jothiswarooban
+# author: Jothiswarooban k
 def area_calc(x1,x2,x3,y1,y2,y3,z1,z2,z3):
     AB = [x2-x1,y2-y1,z2-z1] 
     BC = [x3-x1,y3-y1,z3-z1] 
@@ -60,16 +60,16 @@ def get_trias_normals(inputfile):
             if len(current_triangle) == 3:
                 triangles.append(current_triangle)
                 normals.append(current_normal)
-    return triangles,normals
-
+      total_area,total_volume = volume_calc(triangles,normals)
+      return total_area,total_volume
 def main():
-    '''Pass the location of stl file, and the geometry should have trias in it '''
-    file = 'D:/pytraining/box.stl'
-    triangles,normals = get_trias_normals(file)
-    total_area,total_volume = volume_calc(triangles,normals)
+    '''Pass the location of an stl file, and this will return area and volume.'''
+    file = ''
+    total_area,total_volume = get_trias_normals(file)
     print("Total volume:",total_volume)
     print("Total area:",total_area)
 main()
+
 
 
 
